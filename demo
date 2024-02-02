@@ -1,5 +1,0 @@
-npm init -y
-npm config set init-author-name "gg
-npm config set init-author-email "gintas3073@gmail.com"
-
-npm init -y
