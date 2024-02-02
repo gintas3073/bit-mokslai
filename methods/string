@@ -16,6 +16,8 @@ console.log(secondLetter);
 const lastLetter = text[8];
 console.log(lastLetter);
 
+
+
 const crazyLetter1 = text[2.5];
 console.log(crazyLetter1);
 

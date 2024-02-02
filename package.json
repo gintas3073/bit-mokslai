@@ -13,13 +13,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "scripts": {
-        "boolean": "node --watch ./data-types/boolean.js",
-        "methods:string": "node --watch ./methods/string.js",
-        "string": "node --watch ./data-types/string.js",
-        "number": "node --watch ./data-types/number.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "test2": "echo \"Error: no test2 specified\" && exit 2"
+    "specified\" && exit 2"
     },
     "keywords": [],
   "author": "Gintas G; gintas3073@gmail; https://github.com/gintas3073 <your email>",

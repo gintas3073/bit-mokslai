@@ -16,6 +16,7 @@ const text32 = "Cia yra tektas be kabuciu.";
 console.log(text31);
 console.log(text32);
 
+
 // Vienguba (') kabute.
 const kabute21 = "Vienguba (') kabute.";
 console.log(kabute21);
