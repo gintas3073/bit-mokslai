@@ -20,6 +20,9 @@ OPERATORIAI:
     - aritmetiniai: +, -, /, *, % (liekana), ** (kelimas laipsniu)
     - aritmetiniai priskyrimo: +=, -=, /=, *=, %=, **=
 
+
+-funkcijos
+ivykiai
 */
 
 console.log(1);
