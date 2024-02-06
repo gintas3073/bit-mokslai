@@ -1,5 +1,5 @@
 {
-  "name": "49-grupe-js-intro",
+  "name": "js-intro",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "test2": "echo \"Error: no test2 specified\" && exit 2"
   },
   "keywords": [],
-  "author": "Rimantas (https://github.com/belauzas)",
+  "author": "Gintas",
   "license": "MIT",
   "description": ""
 }
