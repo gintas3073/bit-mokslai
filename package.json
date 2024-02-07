@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "ternary": "node --watch ./compare/ternary.js",
+    "typeof": "node --watch ./compare/typeof.js",
+    "function": "node --watch ./functions/function.js",
     "if": "node --watch ./compare/if.js",
     "boolean": "node --watch ./data-types/boolean.js",
     "methods:string": "node --watch ./methods/string.js",
@@ -13,7 +15,7 @@
     "test2": "echo \"Error: no test2 specified\" && exit 2"
   },
   "keywords": [],
-  "author": "Gintas",
-  "license": "MIT",
+  "author": "Gintas G; gintas3073@gmail; https://github.com/gintas3073",
+  "license": "ISC",
   "description": ""
 }
