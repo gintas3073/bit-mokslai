@@ -18,6 +18,8 @@ console.log(lastLetter);
 
 
 
+
+
 const crazyLetter1 = text[2.5];
 console.log(crazyLetter1);
 
@@ -46,3 +48,4 @@ const surname4 = 'Onaite';
 
 // Vardo "Jonas" ilgis yra 5 simboliai.
 // Asmens Jonas Jonaitis inicialai yra J.J.
+
