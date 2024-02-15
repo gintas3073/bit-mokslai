@@ -10,6 +10,8 @@
     "for-of": "node --watch ./loops/for-of.js",
     "for-in": "node --watch ./loops/for-in.js",
     "function": "node --watch ./functions/function.js",
+    "hof": "node --watch ./functions/hof.js",
+    "arrow": "node --watch ./functions/function.js",
     "number-sum": "node --watch ./exercises/number-sum.js",
     "reverse": "node --watch ./exercises/reverse.js",
     "if": "node --watch ./compare/if.js",

@@ -174,8 +174,15 @@ Grazinti trumpini (inicialai).
 
 pvz.: Chuck Norris -> C.N.
 */
+
 console.clear()
 
+function formatName() {
+    return = 0
+
+
+}
+console.log(formatName('jonas'), "->" 'Jonas');
 
 const1 = 'joNaS';
 lower1 = const1.toLowerCase();
@@ -190,7 +197,3 @@ const2 = 'Chuck Norris';
 split2 = const2.split(' ');
 vardas2 = split2[0];
 pavarde2 = split2[1];
-
-console.log(split2, vardas2, pavarde2);
-
-console.log(vardas2[0] + '.' + pavarde2[0] + '.'); 
