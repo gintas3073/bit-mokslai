@@ -48,18 +48,19 @@ Animal (name, color), intro():
 
 
 
-function mesages(threePhrases) {
 
-    const threePhrases = 'As einu namo';
-    if (threePhrases.length < 4) {
-        return threePhrases;
+
+
+
+//console.log(t.length < 4 ? t : t.slice(-3));
+//console.log(t.length);
+
+function mes(t) {
+    if (t.length < 4) {
+        return t;
     } else {
-        return threePhrases.slice(1);
+        return t.slice(-3);
     }
-
 }
-
-
-
-console.log(mesages);
-
+const t = ['ad', 'ig', 'c', 'd', 'ass'];
+console.log(mes(t));

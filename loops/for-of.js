@@ -8,23 +8,25 @@ const students = [
 
 for (let i = 0; i < students.length; i++) {
     const student = students[i];
-    console.log(`${student.name}: ${stadent.age}`);
+    console.log(`${student.name}: ${student.age}`);
 
     for (const student of students) {
 
         console.log(`${student.name}: ${student.age}`);
     }
-
-    const text = 'Pomidoras';
-
-    for (let i = 0; i = text.length; i++) {
-        const letter = text[1];
-        console.log(i, letter);
-
-
-    }
 }
+const text = 'Pomidoras';
+
+for (let i = 0; i = text.length; i++) {
+    const letter = text[1];
+    console.log(i, letter);
+
+
+}
+
 for (const letter of text) {
 
     console.log(letter);
 }
+
+
