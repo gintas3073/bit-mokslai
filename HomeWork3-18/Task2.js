@@ -1,4 +1,4 @@
-const metai = 2020
+const metai = 1896;
 let olimpines1 = Number(process.arg[2]);
 
 const olimp = (metai - olimpines1);
