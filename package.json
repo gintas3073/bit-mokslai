@@ -34,6 +34,7 @@
     "friday3-1": "node --watch ./exercises/friday3-1.js",
     "friday23": "node --watch ./exercises/friday23.js",
     "homeWork3-6": "node --watch ./exercises/homeWork3-6.js",
+    "New": "node --watch ./Bit-Gediminas/New.js",
     "if": "node --watch ./compare/if.js",
     "boolean": "node --watch ./data-types/boolean.js",
     "objects": "node --watch ./data-types/objects.js",
