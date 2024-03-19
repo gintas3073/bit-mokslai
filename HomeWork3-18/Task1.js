@@ -1,6 +1,6 @@
-let a = Number(process.arg[2]);
-let b = Number(process.arg[3]);
-let c = Number(process.arg[4]);
+let a = Number(process.argv[2]);
+let b = Number(process.argv[3]);
+let c = Number(process.argv[4]);
 
 
 let s = (a + b + c) / 2;

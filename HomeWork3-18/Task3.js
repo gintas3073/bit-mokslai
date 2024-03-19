@@ -1,6 +1,6 @@
-let hour = Number(process.arg[3]);
-let min = Number(process.arg[4]);
-let sec = Number(process.arg[5]);
+let hour = Number(process.argv[3]);
+let min = Number(process.argv[4]);
+let sec = Number(process.argv[5]);
 sec++
 if (sec === 60) {
     min++

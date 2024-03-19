@@ -1,5 +1,5 @@
 const olimpines1 = 1896;
-let metai = Number(process.arg[2]);
+let metai = Number(process.argv[2]);
 
 const olimp = (metai - olimpines1);
 
