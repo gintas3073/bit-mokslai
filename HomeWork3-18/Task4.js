@@ -7,3 +7,4 @@ for (let i = 100; i < 999; i++) {
     arm2 === i ? console.log('Armstrongo skaicius   ' + i) : false;
 
 }
+
