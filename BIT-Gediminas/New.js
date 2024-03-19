@@ -1,5 +1,5 @@
 
-const a = 2;
+/* const a = 2;
 const b = 3;
 const c = 4;
 
@@ -47,3 +47,10 @@ for (let i = 100; i < 999; i++) {
     arm2 === i ? console.log('Armstrongo skaicius   ' + i) : false;
 
 }
+ */
+
+
+const a = [3];
+a.array.forEach(element => {
+
+});
