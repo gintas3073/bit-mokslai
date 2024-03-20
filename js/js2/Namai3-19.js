@@ -1,4 +1,4 @@
-// Uzduotis 1
+/* // Uzduotis 1
 console.log('Uzduotis #1');
 const temp = [1, 2, 7, 3, 4, 6, -1, 2, 4, -3, -3, -5, 1, 5, 6, 7, 5, 9, 2, 3, 6, 7, 8, 6, 3, 6, 7, 5, 6, 7, 1];
 let low = temp[0];
@@ -30,6 +30,15 @@ for (let i = 0; i < 10; i++) {
     }
     console.log(i, m1);
 }
+//Alternatyviai
+
+const mas4 = Array(10).fill(0);
+
+input.forEach((x) => mas4[x]++);
+mas.forEach((d, x) => console.log(`[${i}]=>{d}`));
+console.log(mas4);
+
+
 
 // Uzduotis 3
 console.log('Uzduotis #3');
@@ -53,4 +62,50 @@ console.log(mas);
 console.log(mas3);
 
 
+// kitas budas
+for (let i = 0; i < 4; i++) {
+    let s = "";
+    for (let y = 0; y < 4; y++) {
+        s += `$mas[y][i]`;
 
+    }
+    console.log(s);
+}
+
+console.log("Uzduotis 3");
+ */
+const signal = [4, 7, 3, 5, 8];
+const k = signal.length;
+let avr = [];
+for (let i = 0; i < k; i++) {
+    if (i === 0) {
+        avr.push(((signal[0] + signal[1]) / 2).toFixed(1));
+    } else if (i < (k - 1)) {
+        avr.push(((signal[i - 1] + signal[i] + signal[i + 1]) / 3).toFixed(1));
+    } if (i === (k - 1)) {
+        avr.push(((signal[k - 2] + signal[k - 1]) / 2).toFixed(1));
+    }
+}
+
+console.log(signal, k);
+console.log(avr);
+
+
+const mas = [
+    [1, 2, 2, 5],
+    [5, 1, 4, 2],
+    [2, 2, 1, 3],
+    [2, 8, 9, 6]
+]
+let masM = [];
+const max = 4;
+
+/* for (let i = 0; i < max; i++) {
+    for (let k = 0; k < max; k++) {
+        if (i === k) {
+            mas[i][k] = 0;
+            
+        }
+
+    } */
+console.log(mas[2][2]);

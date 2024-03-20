@@ -31,6 +31,7 @@
     "memory": "node --watch ./exercises/memory.js",
     "students": "node --watch ./exercises/students.js",
     "reverse": "node --watch ./exercises/reverse.js",
+    "Namai": "node --watch ./js/js2/js3/Namai3-20.js",
     "friday3-1": "node --watch ./exercises/friday3-1.js",
     "friday23": "node --watch ./exercises/friday23.js",
     "homeWork3-6": "node --watch ./exercises/homeWork3-6.js",
