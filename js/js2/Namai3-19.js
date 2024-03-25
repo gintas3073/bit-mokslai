@@ -1,4 +1,4 @@
-/* // Uzduotis 1
+/* /* /* // Uzduotis 1
 console.log('Uzduotis #1');
 const temp = [1, 2, 7, 3, 4, 6, -1, 2, 4, -3, -3, -5, 1, 5, 6, 7, 5, 9, 2, 3, 6, 7, 8, 6, 3, 6, 7, 5, 6, 7, 1];
 let low = temp[0];
@@ -74,7 +74,7 @@ for (let i = 0; i < 4; i++) {
 
 console.log("Uzduotis 3");
  */
-const signal = [4, 7, 3, 5, 8];
+/* const signal = [4, 7, 3, 5, 8];
 const k = signal.length;
 let avr = [];
 for (let i = 0; i < k; i++) {
@@ -88,24 +88,23 @@ for (let i = 0; i < k; i++) {
 }
 
 console.log(signal, k);
-console.log(avr);
-
+console.log(avr);  */
 
 const mas = [
     [1, 2, 2, 5],
     [5, 1, 4, 2],
     [2, 2, 1, 3],
     [2, 8, 9, 6]
-]
-let masM = [];
-const max = 4;
+];
+//let masM = [];
+const m = 3;
 
-/* for (let i = 0; i < max; i++) {
-    for (let k = 0; k < max; k++) {
+for (let i = 0; i < m; i++) {
+    for (let k = 0; k < m; k++) {
         if (i === k) {
-            mas[i][k] = 0;
-            
+            mas.replace(0, 0, 0);
+            //mas.replace([m - i][i], 0);
         }
-
-    } */
-console.log(mas[2][2]);
+    }
+    console.log(mas);
+}

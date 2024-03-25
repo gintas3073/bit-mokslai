@@ -8,8 +8,6 @@ const preke = {
 };
 // keisti i stringa
 
-
-
 const string = JSON.sringify(preke);
 
 // saugo object
