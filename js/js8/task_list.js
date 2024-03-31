@@ -4,9 +4,15 @@ const list = document.getElementById("tasks_list");      // <ul> - elementas
 const taskName = document.getElementById("task_name");   // <input>
 const clearTasks = document.getElementById("clear_tasks"); // <button> - išvalyti visą sąrašą
 
+
+
 // Kintamasis kuriame saugomos užduotys
 let tasks = [];
 
+//Funkcija užduočių išsaugojimui
+const saveTasks = () => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 // atvaizduoja masyvą kaip sąrašą
 const showTasks = () => {
@@ -14,7 +20,7 @@ const showTasks = () => {
     list.innerHTML = "";
     //Su kiekviena užduotimi atliksime veiksmą
     //Kinamasis t - masyvo elemantas (užduotis)
-    tasks.forEach((t) => {
+    tasks.forEach((t, i) => {
         // Sukuriam naują objektą (HTMLElement klasės)
         const newTask = document.createElement("li");
         // Objekto atributam priskirame reikšmes
@@ -23,6 +29,24 @@ const showTasks = () => {
         // Naują objektą patalpiname į DOM (sarašo apačią)
         list.appendChild(newTask);
 
+        //Sukuriame HTML button elementą
+        const deleteBtn = document.createElement("button");
+
+        //Priskiriam atributą textConent
+        deleteBtn.textContent = "Ištrinti";
+
+        //Stilizuojame mygtuką
+        deleteBtn.className = "btn btn-info float-end btn-sm";
+
+        deleteBtn.onclick = () => {
+
+            tasks.splice(i, 1);
+            saveTasks();
+            showTasks();
+        };
+
+        //Mygtuką priskiriame li (newTask) elementui
+        newTask.appendChild(deleteBtn);
 
     });
 }
@@ -40,7 +64,7 @@ const addTask = () => {
     showTasks();
 
     //Išsaugoti į localstorage
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    saveTasks();
 }
 
 const clearList = () => {
