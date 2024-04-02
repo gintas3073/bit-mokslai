@@ -3,7 +3,7 @@
 
 //Paimti vieną elementą HTML objektą, mygtuką 
 const skaiciuotiBtn = document.querySelector("#skaiciuoti");
-
+skaiciuotiBtn.className = "btn btn-secondary"
 //Prisiskiriame ivedimo lauka
 const kainaInp = document.querySelector("#kaina");
 
@@ -40,15 +40,17 @@ ijungtiMygtuka = () => {
     console.log(kainaInp.value);
     if (kainaInp.value == '' || isNaN(kainaInp.value)) {
         skaiciuotiBtn.disabled = true;
-
+        skaiciuotiBtn.className = "btn btn-danger"
         error.innerHTML = "Įveskite skaičių"
         error.style.visibility = "visible";
         kainaInp.className = "form-control is-invalid";
+
     } else {
         skaiciuotiBtn.disabled = false;
         //error.innerHTML=""
         //error.style.visibility = "hidden";
         kainaInp.className = "form-control is-valid";
+        skaiciuotiBtn.className = "btn btn-success"
     }
 
 }
