@@ -59,7 +59,7 @@ const addProduct = () => {
     showProducts();
     saveProducts();
     atlyginimaiList.text = "123";
-    console.log(atlyginimaiList.text)
+    console.log(atlyginimaiList)
 }
 
 const clear = () => {
