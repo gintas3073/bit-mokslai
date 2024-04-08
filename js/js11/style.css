@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: "Roboboto", sans-serif;
+font-family: "Franklin Gotic Medium";
+
+}
+
+.purple {   
+background-color: purple;
+text-align:center ;
+padding: 10px;
+color:  white;
+font-size: 14px;
+
+}
+.learnMore{
+   
+    border-bottom: 0.5px solid white;
+    text-decoration-thickness: ;
+}
+
+.mainHeaderContainer {
+    text-decoration: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.mainHeaderContainer img {
+    width: 150px;
+}
+mainHederList * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+}
