@@ -1,28 +1,36 @@
-*{
+[11:37 AM] Mantas Santockis (Mentorius) < !DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+rel="stylesheet"
+
+/><link rel="stylesheet" href="style.css" /><title>Document</title></head><body><header><div class="purple"><p class="purplePara">India’s first mobile app for construction industry. <span class="learMore">Learn More</span></p></div><div class="mainHeaderContainer"><img src="./images/logo.svg" alt="Logo" /><div class="mainHeaderList"><nav><ul><li><a href="">About</a></li><li><a href="">Product</a></li><li><a href="">Team</a></li><li><a href="">FAQ</a></li><li><a href="">Blog</a></li><li><a href="">Shop</a></li></ul><button>Request Demo</button></nav></div></div></header><main><section class="topHeaderContainer"><h1>Easy solution for builders and contractors <br>to manage and execute projects within budget range</h1><button>Request Demo</button></section><section class="elipsesContainer"><img class="absolute bigElipse" src="./images/bigElipse.svg" alt=""><img class="absolute smallElipse" src="./images/smallElipse.svg" alt=""><img class="absolute topPhone" src="./images/topPhone.svg" alt=""><img class="absolute logoInElipses" src="./images/logo.svg" alt=""><button class="absolute btnInElipses">Explore Product</button></section></main></body></html>[11:37 AM] Mantas Santockis (Mentorius) * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-font-family: "Roboboto", sans-serif;
-font-family: "Franklin Gotic Medium";
-
+    font-family: "Roboto", sans-serif;
 }
 
-.purple {   
-background-color: purple;
-text-align:center ;
-padding: 10px;
-color:  white;
-font-size: 14px;
 
+header {
+    box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
 }
-.learnMore{
-   
-    border-bottom: 0.5px solid white;
-    text-decoration-thickness: ;
+
+.purple {
+    background-color: #60267F;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.learMore {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+
 }
 
 .mainHeaderContainer {
-    text-decoration: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
@@ -31,10 +39,168 @@ font-size: 14px;
 .mainHeaderContainer img {
     width: 150px;
 }
-mainHederList * {
+
+.mainHeaderList * {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #2B0236;
+}
+
+
+.mainHeaderContainer button {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid #9A54BC;
+    border-radius: 5px;
+    color: #9A54BC;
+    cursor: pointer;
+}
+
+.mainHeaderContainer button:hover {
+    background-color: #9A54BC;
+    color: white;
+}
+
+
+.topHeaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.topHeaderContainer h1 {
+    font-size: 40px;
+    color: #2B0236;
+}
+
+.topHeaderContainer button {
+    padding: 15px 30px;
+    background-color: #9A54BC;
+    border: none;
+    border: 1.5px solid #9A54BC;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+
+.topHeaderContainer button:hover {
+    background-color: white;
+    color: #9A54BC;
+}
+
+.elipsesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+    top: 100px;
+
+}
+
+.smallElipse {
+    top: 120px;
+}
+
+.topPhone {
+    top: 130px;
+}
+
+
+.logoInElipses {
+    top: 230px;
+}
+
+.btnInElipses {
+    top: 420px;
+    padding: 10px 15px;
+    background-color: white;
+    border: none;
+    border: 2px solid #9A54BC;
+    border-radius: 5px;
+    color: #9A54BC;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btnInElipses:hover {
+    background-color: #9A54BC;
+    color: white;
+}
+
+.paraContainer{
+    width: 27rem;
+    height: 100%;
+    align-items: center;
+
+}
+
+.howHelpContainer{
+
+display:flex;
+justify-content: space-evenly;
+width: 100%;
+align-items: center;
+}
+
+.howHelpBtnContainer {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.howHelpBtnContainer button {
+background-color: transparent;
+width: 50%;
+border: none;
+border: 2px white;
+font-weight: 500;
+cursor: pointer;
+}
+
+.howHelpBtnContainer button:hower{
+background-color: blueviolet;
+color: white;
+border: 2px solid #9A54BC;
+border-radius: 5px;
+}
+
+.howHelpAllTextContainer {
+width: 90%;
+display: flex;
+
+flex-direction: column;
+height:100% ;
+gap: 0.5rem;
+margin: 1.6rem auto;
+}
+.howHelpAllTextContainer p{
+    padding: 0.6rem; 
+    background-color: #F2F2F2;
+}
+
+
+.imgContainer img{
+width: 15rem;
+
 
 }
