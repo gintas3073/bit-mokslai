@@ -2,9 +2,9 @@
 
 class Triangle {    
     constructor(
-        private sideA: number, 
-        private sideB: number, 
-        private sideC: number) {
+        public sideA: number, 
+        public sideB: number, 
+        public sideC: number) {
         
         if (!this.isValidTriangle()) {
             throw new Error('Ktrastines neformuoja trikampio');
