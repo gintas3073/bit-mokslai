@@ -1,32 +1,24 @@
+"use strict";
 class Employee {
-    
-
-    constructor(
-        public name: string, 
-        public surname: string, 
-        public salary: number) {
-        
+    constructor(name, surname, salary) {
+        this.name = name;
+        this.surname = surname;
+        this.salary = salary;
     }
-
-    getName(): string {
+    getName() {
         return this.name;
     }
-
-    getSurname(): string {
+    getSurname() {
         return this.surname;
     }
-
-    getSalary(): number {
+    getSalary() {
         return this.salary;
     }
 }
-
-const employeeForm = document.getElementById('employee-form') as HTMLFormElement;
-const employeeList = document.getElementById('employee-list') as HTMLUListElement;
-
-let employees: Employee[] = [];
-
-function displayEmployees(): void {
+const employeeForm = document.getElementById('employee-form');
+const employeeList = document.getElementById('employee-list');
+let employees = [];
+function displayEmployees() {
     employeeList.innerHTML = '';
     employees.forEach(employee => {
         const li = document.createElement('li');
@@ -34,30 +26,26 @@ function displayEmployees(): void {
         employeeList.appendChild(li);
     });
 }
-
-function addEmployee(event: Event): void {
+function addEmployee(event) {
     event.preventDefault();
-    const name = (document.getElementById('name') as HTMLInputElement).value;
-    const surname = (document.getElementById('surname') as HTMLInputElement).value;
-    const salary = parseFloat((document.getElementById('salary') as HTMLInputElement).value);
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
+    const salary = parseFloat(document.getElementById('salary').value);
     const employee = new Employee(name, surname, salary);
     employees.push(employee);
     displayEmployees();
     saveData();
 }
-
-function saveData(): void {
+function saveData() {
     localStorage.setItem('employees', JSON.stringify(employees));
 }
-
-function loadData(): void {
+function loadData() {
     const data = localStorage.getItem('employees');
     if (data) {
-        employees = JSON.parse(data).map((employeeData: any) => {
+        employees = JSON.parse(data).map((employeeData) => {
             return new Employee(employeeData.name, employeeData.surname, employeeData.salary);
         });
         displayEmployees();
     }
 }
-
 employeeForm.addEventListener('submit', addEmployee);
