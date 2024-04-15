@@ -455,21 +455,6 @@ button {
     bottom: 30px;
 }
 
-.vector {
-    position: absolute;
-    left: 35px;
-    top: 20px;
-    z-index: -1;
-}
-
-.absolute-span {
-    position: absolute;
-    top: 50px;
-    right: 140px;
-    color: #9A54BC;
-    font-weight: 500;
-}
-
 .download-collab-app {
     margin-top: 50px;
     display: flex;

@@ -1,25 +1,4 @@
-class Employee {
-    
-
-    constructor(
-        public name: string, 
-        public surname: string, 
-        public salary: number) {
-        
-    }
-
-    getName(): string {
-        return this.name;
-    }
-
-    getSurname(): string {
-        return this.surname;
-    }
-
-    getSalary(): number {
-        return this.salary;
-    }
-}
+import Employee from './Employee';
 
 const employeeForm = document.getElementById('employee-form') as HTMLFormElement;
 const employeeList = document.getElementById('employee-list') as HTMLUListElement;
@@ -30,7 +9,7 @@ function displayEmployees(): void {
     employeeList.innerHTML = '';
     employees.forEach(employee => {
         const li = document.createElement('li');
-        li.textContent = `Name: ${employee.getName()}, Surname: ${employee.getSurname()}, Salary: ${employee.getSalary()}`;
+        li.textContent = `Name: ${employee.getName()}, Surname: ${employee.getSurname()}, Salary: ${employee.getSalary()}, GPM: ${employee.gpm()}, PSD: ${employee.psd()}, VSD: ${employee.vsd()}`;
         employeeList.appendChild(li);
     });
 }
@@ -42,6 +21,12 @@ function addEmployee(event: Event): void {
     const salary = parseFloat((document.getElementById('salary') as HTMLInputElement).value);
     const employee = new Employee(name, surname, salary);
     employees.push(employee);
+    displayEmployees();
+    saveData();
+}
+
+function deleteEmployee(index: number): void {
+    employees.splice(index, 1);
     displayEmployees();
     saveData();
 }
@@ -61,3 +46,5 @@ function loadData(): void {
 }
 
 employeeForm.addEventListener('submit', addEmployee);
+
+loadData();
