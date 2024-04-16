@@ -1,8 +1,9 @@
 export interface Registration {
 firstName:string;
 lastName:string;
-birthYear:number;
+gender?:string;
+birthYear:string;
 phone:string;
 email:string;
-gender:string;
+id?:string;
 }

@@ -345,6 +345,7 @@ button {
     flex-direction: column;
     gap: 30px;
     border-radius: 10px;
+    transition: all 0.1s ease-in-out;
 }
 
 
@@ -387,7 +388,11 @@ button {
     background: #FFFFFF;
 }
 
+.bigCard:hower {
+background-color: #56E6A5;
 
+.
+}
 .ratings-section {
     margin-top: 150px;
     display: flex;
