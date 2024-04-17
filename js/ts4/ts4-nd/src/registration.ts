@@ -1,7 +1,7 @@
 export interface Registration {
 firstName:string;
 lastName:string;
-gender?:string;
+gender:string;
 birthYear:string;
 phone:string;
 email:string;

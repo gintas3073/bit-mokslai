@@ -1,5 +1,5 @@
 
-import { Registration } from "./Registration";
+import { Registration } from "./registration.js";
 
     const firstName = <HTMLInputElement>document.getElementById('firstName');
     const lastName = <HTMLInputElement>document.getElementById('lastName');
@@ -7,7 +7,7 @@ import { Registration } from "./Registration";
     const email = <HTMLInputElement>document.getElementById('email');
     const phone = <HTMLInputElement>document.getElementById('phone');
     const addRegistrationBtn =<HTMLButtonElement>document.getElementById(`addRegistration`);
-       const loadDataButton=<HTMLButtonElement>document.getElementById(`loadData`);
+    const loadDataButton=<HTMLButtonElement>document.getElementById(`loadData`);
     const dataTableBody=<HTMLElement>document.getElementById(`dataTableBody`);
        let registrationData:Registration[];
        const dataTable =<HTMLElement>document.getElementById("dataTable");
@@ -15,17 +15,27 @@ import { Registration } from "./Registration";
     
     
        addRegistrationBtn.onclick=()=>{
-    const gender = <HTMLInputElement | null>document.querySelector('input[name="gender"]:checked');
-    
-    const reg:Registration={
+    const gender = <HTMLInputElement>document.querySelector('input[name="gender"]:checked');
+    if (gender!=null){
+   const reg={
     firstName:firstName.value,
     lastName:lastName.value,
     birthYear:birthYear.value,
     gender:gender.value,
     phone:phone.value,
     email:email.value,
-
+   }
+    }else{
+        const reg={
+    firstName:firstName.value,
+    lastName:lastName.value,
+    birthYear:birthYear.value,
+    phone:phone.value,
+    email:email.value,
     }
+}
+      
+
     fetch("https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija.json",{
 method:"POST",
         headers:{
@@ -76,16 +86,25 @@ tr.onclick=()=>{
     (<HTMLInputElement>document.getElementById("phoneEdit")).value=reg.phone;
     (<HTMLInputElement>document.getElementById("emailEdit")).value=reg.email;
     
-    (<HTMLButtonElement>document.getElementById("updateRegistration").onclick=()=>{
+    if (reg.gender=="vyras"){
+(<HTMLInputElement>document.getElementById("maleEdit")).checked=true;
+(<HTMLInputElement>document.getElementById("femaleEdit")).checked=false;
+    }else{
+(<HTMLInputElement>document.getElementById("maleEdit")).checked=false;
+(<HTMLInputElement>document.getElementById("femaleEdit")).checked=true;
+    }
+
+    (<HTMLButtonElement>document.getElementById("updateRegistration")).onclick=()=>{
         const upReg:Registration={
     firstName:(<HTMLInputElement>document.getElementById("firstNameEdit")).value,
     lastName:(<HTMLInputElement>document.getElementById("lastNameEdit")).value,
     birthYear:(<HTMLInputElement>document.getElementById("birthYearEdit")).value,
-    gender:(<HTMLInputElement>document.getElementById("genderEdit")).value,
+    //gender:(<HTMLInputElement>document.getElementById("genderEdit")).value,
+gender:(<HTMLInputElement>document.querySelector(`input[name="genderEdit"]:checked`)).value,
     phone:(<HTMLInputElement>document.getElementById("phoneEdit")).value,
     email:(<HTMLInputElement>document.getElementById("emailEdit")).value,
         }
-fetch("https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija/${reg.id}.json",{
+fetch(`https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija/${reg.id}.json`,{
 method:"PUT",
         headers:{
             'Accept':'application/json',

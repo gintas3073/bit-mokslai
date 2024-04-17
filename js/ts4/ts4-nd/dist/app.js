@@ -11,14 +11,25 @@ const dataTable = document.getElementById("dataTable");
 const editForm = document.getElementById("editForm");
 addRegistrationBtn.onclick = () => {
     const gender = document.querySelector('input[name="gender"]:checked');
-    const reg = {
-        firstName: firstName.value,
-        lastName: lastName.value,
-        birthYear: birthYear.value,
-        gender: gender.value,
-        phone: phone.value,
-        email: email.value,
-    };
+    if (gender != null) {
+        const reg = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            birthYear: birthYear.value,
+            gender: gender.value,
+            phone: phone.value,
+            email: email.value,
+        };
+    }
+    else {
+        const reg = {
+            firstName: firstName.value,
+            lastName: lastName.value,
+            birthYear: birthYear.value,
+            phone: phone.value,
+            email: email.value,
+        };
+    }
     fetch("https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija.json", {
         method: "POST",
         headers: {
@@ -60,16 +71,25 @@ const showData = () => {
             //<HTMLInputElement>document.getElementById("genderEdit")).value=reg.gender.toString();
             document.getElementById("phoneEdit").value = reg.phone;
             document.getElementById("emailEdit").value = reg.email;
+            if (reg.gender == "vyras") {
+                document.getElementById("maleEdit").checked = true;
+                document.getElementById("femaleEdit").checked = false;
+            }
+            else {
+                document.getElementById("maleEdit").checked = false;
+                document.getElementById("femaleEdit").checked = true;
+            }
             document.getElementById("updateRegistration").onclick = () => {
                 const upReg = {
                     firstName: document.getElementById("firstNameEdit").value,
                     lastName: document.getElementById("lastNameEdit").value,
                     birthYear: document.getElementById("birthYearEdit").value,
-                    gender: document.getElementById("genderEdit").value,
+                    //gender:(<HTMLInputElement>document.getElementById("genderEdit")).value,
+                    gender: document.querySelector(`input[name="genderEdit"]:checked`).value,
                     phone: document.getElementById("phoneEdit").value,
                     email: document.getElementById("emailEdit").value,
                 };
-                fetch("https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija/${reg.id}.json", {
+                fetch(`https://registracija-73e47-default-rtdb.europe-west1.firebasedatabase.app/Registracija/${reg.id}.json`, {
                     method: "PUT",
                     headers: {
                         'Accept': 'application/json',
