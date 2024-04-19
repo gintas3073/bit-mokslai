@@ -26,13 +26,14 @@ registrationData.forEach((reg)=>{
 
 dataTableBody.appendChild(tr);
 tr.onclick=()=>{
-    (<HTMLElement>document.getElementById("fistNameEdit")).style.display="none";
+    
+    (<HTMLElement>document.getElementById("dataTable")).style.display="none";
     (<HTMLElement>document.getElementById("editForm")).style.display="block";
    
     (<HTMLInputElement>document.getElementById("firstNameEdit")).value=reg.firstName;
     (<HTMLInputElement>document.getElementById("lastNameEdit")).value=reg.lastName;
     (<HTMLInputElement>document.getElementById("birthYearEdit")).value=reg.birthYear.toString();
-   //<HTMLInputElement>document.getElementById("genderEdit")).value=reg.gender.toString();
+   //<HTMLInputElement>document.getElementById("genderEdit")).value=reg.gender;
     (<HTMLInputElement>document.getElementById("phoneEdit")).value=reg.phone;
     (<HTMLInputElement>document.getElementById("emailEdit")).value=reg.email;
     
@@ -62,12 +63,24 @@ gender:(<HTMLInputElement>document.querySelector(`input[name="genderEdit"]:check
     .then((data)=>{
         console.log("Irasas atnaujintas");
         console.log(data);
-        (<HTMLElement>document.getElementById("fistNameEdit")).style.display="block";
+        (<HTMLElement>document.getElementById("dataTable")).style.display="block";
     (<HTMLElement>document.getElementById("editForm")).style.display="none";
    
        // loadData();
     })
     };
+(<HTMLButtonElement>document.getElementById("deleteRegistration")).onclick=()=>{
+
+                fetchRegistrations(`Registracija/${reg.id}`, "DELETE", null)
+                .then((response)=>{
+                    return response.json();
+                })
+                .then((data)=>{
+                    (<HTMLElement>document.getElementById("dataTable")).style.display="block";
+                    (<HTMLElement>document.getElementById("editForm")).style.display="none";
+                    loadData();
+                });
+};
 
 }
 })

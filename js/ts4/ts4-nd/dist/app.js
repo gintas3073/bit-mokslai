@@ -1,3 +1,4 @@
+import { loginExec, registerExec } from "./auth.js";
 import { fetchRegistrations } from "./fetchData.js";
 import { loadData } from "./loadData.js";
 const firstName = document.getElementById('firstName');
@@ -41,5 +42,20 @@ addRegistrationBtn.onclick = () => {
         });
     }
 };
+export const userInfo = {
+    email: "",
+    idToken: "",
+    loggedin: false,
+};
+// Paslėpiame duomenų sekciją ir įjungiame rodyti prisijungimo sekciją
+document.getElementById("loginSection").style.display = "block";
+document.getElementById("dataSection").style.display = "none";
+document.getElementById("loginError").style.display = "none";
+//Registracijos URL
+//https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAZuYggKgrCTnZfT9yn6NIeRFV0LmgY8tg
+//Prisijungimui URL
+//https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAZuYggKgrCTnZfT9yn6NIeRFV0LmgY8tg
 loadDataButton.onclick = loadData;
-loadData();
+// Mygtukam login ir register priskiriame f-jas iš auth.ts failo
+document.getElementById("login").onclick = loginExec;
+document.getElementById("register").onclick = registerExec;

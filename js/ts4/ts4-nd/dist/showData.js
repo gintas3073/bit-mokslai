@@ -1,4 +1,5 @@
 import { fetchRegistrations } from "./fetchData.js";
+import { loadData } from "./loadData.js";
 export const showData = (registrationData) => {
     let dataTableBody = document.getElementById("dataTableBody");
     dataTableBody.innerHTML = "";
@@ -17,12 +18,12 @@ export const showData = (registrationData) => {
         tr.appendChild(tdV);
         dataTableBody.appendChild(tr);
         tr.onclick = () => {
-            document.getElementById("fistNameEdit").style.display = "none";
+            document.getElementById("dataTable").style.display = "none";
             document.getElementById("editForm").style.display = "block";
             document.getElementById("firstNameEdit").value = reg.firstName;
             document.getElementById("lastNameEdit").value = reg.lastName;
             document.getElementById("birthYearEdit").value = reg.birthYear.toString();
-            //<HTMLInputElement>document.getElementById("genderEdit")).value=reg.gender.toString();
+            //<HTMLInputElement>document.getElementById("genderEdit")).value=reg.gender;
             document.getElementById("phoneEdit").value = reg.phone;
             document.getElementById("emailEdit").value = reg.email;
             if (reg.gender == "vyras") {
@@ -50,9 +51,20 @@ export const showData = (registrationData) => {
                     .then((data) => {
                     console.log("Irasas atnaujintas");
                     console.log(data);
-                    document.getElementById("fistNameEdit").style.display = "block";
+                    document.getElementById("dataTable").style.display = "block";
                     document.getElementById("editForm").style.display = "none";
                     // loadData();
+                });
+            };
+            document.getElementById("deleteRegistration").onclick = () => {
+                fetchRegistrations(`Registracija/${reg.id}`, "DELETE", null)
+                    .then((response) => {
+                    return response.json();
+                })
+                    .then((data) => {
+                    document.getElementById("dataTable").style.display = "block";
+                    document.getElementById("editForm").style.display = "none";
+                    loadData();
                 });
             };
         };
