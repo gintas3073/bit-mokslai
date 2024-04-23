@@ -562,81 +562,79 @@ span {
     min-height: 15px;
 }
 
-/*
-.joinUsMainContainer {
-    padding: 100px 200px;
+.downloadContainer{
+margin-top: 300px;
+width: 100%;
+height:500px;
+background-color: pink;
+
+}
+
+.downloadContainer{
+font-size: 64px;
+color: white;
+
+}
+
+.downloadBtnContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.joinUsInfo {
-    padding: 40px 0;
-}
-
-.joinUsBtn {
-    padding: 15px 30px;
-    background-color: #9A54BC;
-    border: none;
-    border: 1px solid #9A54BC;
-    border-radius: 7px;
-    color: white;
-    font-weight: 700;
-}
-
-.downloadMainContainer {
-    background-color: #9A54BC;
-    padding: 120px 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.downloadMainContainer h1 {
-    color: #ffffff;
-    font-size: 40px;
-}
-
-.downloadContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
+    gap: 50px
 }
 
 .downloadBtn {
     padding: 15px 30px;
+    background-color: palevioletred;
     border: none;
+    border: 3px solid white;
     border-radius: 7px;
-    font-weight: 700;
-}
-
-.btnWhite {
-    border: 2px solid #9A54BC;
-    color: #9A54BC;
-    background-color: white;
-}
-
-.btnPurple {
-    border: 2px solid white;
     color: white;
-    background-color: #9A54BC;
-}
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: 3p;
 
-.mapMainContainer {
+}
+.downloadBtn:hower{
+background-color: white;
+color: palevioletred;
+
+}
+.questionMainContainer{
+
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 100px;
-}
 
+    
+
+}
 .contacts {
-    display: flex;
+    width: 40%;
+       display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 30px;
+    background-color: greenyellow;
+    justify-content: flex-end;
+    align-self: flex-end;
     text-align: center;
-} */
+    
+}
+.contacts p, h2{
+    width: 50%;
+    font-weight: 500;
+
+}
+
+.contacts h2 {
+    margin-bottom: 30px;;
+}
+
+.map {
+    width: 55%;
+
+
+}
+
+
+
