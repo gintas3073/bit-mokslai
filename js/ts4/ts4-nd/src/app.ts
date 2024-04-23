@@ -1,8 +1,9 @@
-import { loginExec, registerExec } from "./auth.js";
+import { loadUser, loginExec, registerExec, showLogin } from "./auth.js";
 import { Registration } from "./registration.js";
 import {fetchRegistrations} from "./fetchData.js"
 import {showData} from "./showData.js"
 import { loadData } from "./loadData.js";
+import { User } from "./user.js";
 
     const firstName = <HTMLInputElement>document.getElementById('firstName');
     const lastName = <HTMLInputElement>document.getElementById('lastName');
@@ -52,17 +53,17 @@ addRegistrationBtn.onclick=()=>{
 
 }
 
-export const userInfo={
+export const userInfo:User={
     email:"",
     idToken:"",
     loggedin:false,
 };
 
 // Paslėpiame duomenų sekciją ir įjungiame rodyti prisijungimo sekciją
-(<HTMLElement>document.getElementById("loginSection")).style.display="block";
-(<HTMLElement>document.getElementById("dataSection")).style.display="none";
-(<HTMLElement>document.getElementById("loginError")).style.display="none";
+showLogin();
 
+
+loadUser();
 //Registracijos URL
 //https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAZuYggKgrCTnZfT9yn6NIeRFV0LmgY8tg
 
@@ -75,6 +76,6 @@ loadDataButton.onclick=loadData;
 // Mygtukam login ir register priskiriame f-jas iš auth.ts failo
 (<HTMLButtonElement>document.getElementById("login")).onclick=loginExec;
 (<HTMLButtonElement>document.getElementById("register")).onclick=registerExec;
-
+(<HTMLElement>document.getElementById("loginError")).style.display="none";
 
  

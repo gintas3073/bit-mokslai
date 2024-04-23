@@ -270,6 +270,7 @@ header {
 
 .videoMainContainer iframe {
     width: 80%;
+    height: 600px;
     text-align: center;
 }
 
@@ -280,6 +281,7 @@ header {
     align-items: center;
     flex-direction: column;
     gap: 50px;
+    margin-bottom: 80px;
 }
 
 .projectDoneCardsContainer {
@@ -312,7 +314,8 @@ span {
 }
 
 .bigCardsContainer {
-    margin-top: 100px;
+    background-color: #E2BDF21C;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,3 +354,289 @@ span {
     padding: 3px 4px;
     border-radius: 5px;
 }
+
+.bigThreeCardsContainer {
+    width: 900px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.bigCard {
+    width: 28%;
+    padding: 25px;
+    height: 400px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.bigCard h4 {
+    font-size: 18px;
+
+}
+
+.bigCard button {
+    padding: 20px 15px;
+    background-color: white;
+    border: none;
+    border: 2px solid #2B0236;
+    border-radius: 5px;
+    color: #2B0236;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.bigCards ul {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.bigCard ul li::marker {
+    content: "▶  ";
+}
+
+.bigCard ul li {
+    font-size: 12px;
+    color: #000000c8;
+}
+
+.bigCardThree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bigCardThree p {
+    font-size: 12px;
+    color: #000000c8;
+}
+
+.bigCard:hover {
+    background-color: #56E6A5;
+}
+
+.starsContainer {
+    background-color: #E2BDF21C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 400px;
+}
+
+.starsPara p {
+    width: 50%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.starsRoundFaceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    gap: 20px;
+}
+
+.starsPara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.starsPara::before {
+    font-family: "bootstrap-icons";
+    content: '\F12F';
+    margin-right: 100px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.starsPara::after {
+    font-family: "bootstrap-icons";
+    content: '\F138';
+    margin-left: 100px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.snakeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.snakeContainer button {
+    padding: 15px 30px;
+    background-color: #9A54BC;
+    border: none;
+    border: 1px solid #9A54BC;
+    border-radius: 7px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.snakeContainer button:hover {
+    background-color: white;
+    color: #9A54BC
+}
+
+.snakeImgContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 900px;
+}
+
+.snakeImgContainer img {
+    position: absolute;
+}
+
+.line {
+    min-width: 900px;
+    margin-top: 200px;
+    z-index: -1;
+}
+
+.face1 {
+    top: -25px;
+    left: -25px;
+}
+
+.face2 {
+    top: 140px;
+    left: 110px;
+}
+
+.face3 {
+    top: 110px;
+    left: 250px;
+}
+
+.face4 {
+    top: 180px;
+    left: 360px;
+}
+
+.face5 {
+    top: 190px;
+    left: 490px;
+}
+
+.face6 {
+    top: 160px;
+    left: 630px;
+}
+
+.face7 {
+    top: 170px;
+    left: 810px;
+}
+
+.face8 {
+    top: 100px;
+    left: 860px;
+}
+
+.you {
+    top: 68px;
+    left: 750px;
+    min-height: 15px;
+}
+
+/*
+.joinUsMainContainer {
+    padding: 100px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.joinUsInfo {
+    padding: 40px 0;
+}
+
+.joinUsBtn {
+    padding: 15px 30px;
+    background-color: #9A54BC;
+    border: none;
+    border: 1px solid #9A54BC;
+    border-radius: 7px;
+    color: white;
+    font-weight: 700;
+}
+
+.downloadMainContainer {
+    background-color: #9A54BC;
+    padding: 120px 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.downloadMainContainer h1 {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.downloadContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.downloadBtn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.btnWhite {
+    border: 2px solid #9A54BC;
+    color: #9A54BC;
+    background-color: white;
+}
+
+.btnPurple {
+    border: 2px solid white;
+    color: white;
+    background-color: #9A54BC;
+}
+
+.mapMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
