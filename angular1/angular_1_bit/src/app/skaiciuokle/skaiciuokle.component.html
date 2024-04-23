@@ -1,7 +1,23 @@
-<div>
-    Labas pasauli is app.component.html
-    <div>
-        <app-skaiciuokle></app-skaiciuokle>
+<div class="card mt-5">
+    <div class="card-body">
+        <label class="form-label">Įveskite skaičių X</label>
+        <input class="form-control mb-3" type="number" name="x" [(ngModel)]="x">
+        <label class="form-label">Įveskite skaičių Y</label>
+        <input class="form-control mb-3" type="number" name="y" [(ngModel)]="y">
+
+        <button class="btn btn-primary" (click)="skaiciuok()" [disabled]="x==null || y==null">Pridėti</button>
+
+        <div class="alert alert-info mt-3" *ngIf="suma != null">Suma: {{ suma }} </div>
     </div>
-    cia tesinys is app.component.html
 </div>
+
+<!--
+[value]="x"
+[class]="z"          -- atributiopriskiriame reikšmę iš TS failo;
+(click)="metodas()"  -- kai bus veiksmas click, tuomet iškvieti metodą iš TS failo;
+
+[(ngModel)]="z"      -- two-way-binding (dvipusis susietumas), paima reikšmę iš TS failo, o koreguojant "HTML" įstato reikšmę į TS failą
+
+{{textas}}            -- teksto isvedimas
+*ngIf ="5==5"               ----strukturine direktyva
+-->

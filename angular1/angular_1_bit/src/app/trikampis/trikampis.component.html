@@ -1,1 +1,19 @@
-<p>trikampis works!</p>
+<div>
+    <h2>Trikampio Ploto Skaičiuoklė</h2>
+    <label for="side1">Pirma kraštinė:</label>
+    <input type="number" id="side1" [(ngModel)]="side1" placeholder="Įveskite ilgį">
+    <br>
+    <label for="side2">Antra kraštinė:</label>
+    <input type="number" id="side2" [(ngModel)]="side2" placeholder="Įveskite ilgį">
+    <br>
+    <label for="side3">Trečia kraštinė:</label>
+
+    <input type="number" id="side3" [(ngModel)]="side3" placeholder="Įveskite ilgį">
+    <br>
+    <button (click)="calculateArea()">Skaičiuoti Plotą</button>
+    <br>
+
+    <div *ngIf="area !== null">
+        <p>Trikampio plotas yra:</p>
+    </div>
+</div>
