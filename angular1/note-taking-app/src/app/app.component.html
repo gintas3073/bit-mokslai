@@ -1,0 +1,10 @@
+<div>
+  <h1>Mano Užrašai</h1>
+  <app-note-form></app-note-form>
+  <ul>
+    <li *ngFor="let note of notes; let i = index">
+      {{ note }}
+      <button (click)="deleteNote(i)">Ištrinti</button>
+    </li>
+  </ul>
+</div>
