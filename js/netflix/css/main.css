@@ -1,0 +1,68 @@
+[12:16 PM] Agnė Kalinauskienė <section class="features"><div class="mainContainer"><div class="container"><div class="textSide"><h2 class="h2">Enjoy on your TV</h2><p class="textPara">Watch on Smart TVs,
+Playstation,
+Xbox,
+Chromecast,
+Apple TV,
+Blu-ray players,
+and more.</p></div><div class="photoSide"><div class="photoContainer"><img src="images/pirmas.png" alt=""></div></div></div></div><div class="mainContainer"><div class="container odd"><div class="photoSide"><div class="photoContainer"><img src="images/antras.png" alt=""></div></div><div class="textSide"><h2 class="h2">Download your shows to watch offline</h2><p class="textPara">Save your favorites easily and always have something to watch.</p></div></div></div><div class="mainContainer"><div class="container"><div class="textSide"><h2 class="h2">Watch everywhere</h2><p class="textPara">Stream unlimited movies and TV shows on your phone,
+tablet,
+laptop,
+and TV.</p></div><div class="photoSide"><div class="photoContainer"><img src="images/trecias.png" alt=""></div></div></div></div><div class="mainContainer"><div class="container odd"><div class="photoSide"><div class="photoContainer"><img src="images/ketvirtas.png" alt=""></div></div><div class="textSide"><h2 class="h2">Create profiles for kids</h2><p class="textPara">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p></div></div></div></section>[12:21 PM] Agnė Kalinauskienė .mainContainer {
+    background-color: #000000;
+    border: none;
+    border-top: 8px solid #232323;
+    display: flex;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h2 {
+    margin-left: 20px;
+    font-size: 48px;
+    color: white;
+}
+
+.textPara {
+    margin-left: 20px;
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 955px) {
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .odd div:first-child {
+        order: 1;
+    }
+
+    .h2 {
+        margin-left: 20px;
+        font-size: 32px;
+        color: white;
+    }
+
+    .textPara {
+        margin-left: 20px;
+        font-size: 18px;
+        color: white;
+    }
+}

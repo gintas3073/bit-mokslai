@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD knygų sąrašas</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+  <script src="firebaseConfig.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>CRUD knygų sąrašas</h1>
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Pavadinimas" required>
+    <input type="text" id="author" placeholder="Autorius" required>
+    <input type="number" id="year" placeholder="Metai" required>
+    <button type="submit">Pridėti knygą</button>
+  </form>
+  <ul id="book-list"></ul>
+</body>
+
+</html>
