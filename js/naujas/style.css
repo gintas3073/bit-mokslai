@@ -1,0 +1,53 @@
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: purple;
+}
+
+
+.acordeon {
+    background-color: silver;
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.acordeon:hover {
+    background-color: rgb(219, 216, 216);
+}
+
+.acordeon::after {
+    font-family: "bootstrap-icons";
+    content: "\F4FE";
+    font-size: 24px;
+}
+
+.desc {
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition:max-heght 0.8s ease;
+}
+
+.active::after {
+    font-family: "bootstrap-icons";
+    content: "\F2E7";
+    font-size: 24px;
+}
+
