@@ -1,0 +1,61 @@
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header">
+            Pridėti naują imone
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="newEmployeeSubmit(f)" #f="ngForm">
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label text-end">Imones pavadinimas:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="name" id="" class="form-control" [class.is-invalid]="!inputName.valid && inputName.touched" ngModel required minlength="2" maxlength="32" pattern="[a-zA-Z ]*" #inputName="ngModel">
+                        <div class="helper-block " *ngIf="!inputName.valid && inputName.touched">
+                            Pavadinimas yra privalomas, turi būti 2-32 simbolių ilgio, galima įvesti tik raides ir tarpą
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label text-end">Imones kodas:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="surname" id="" class="form-control" [class.is-invalid]="!inputSurname.valid && inputSurname.touched" ngModel required minlength="2" maxlength="32" pattern="[a-zA-Z ]*" #inputSurname="ngModel">
+                        <div class="helper-block " *ngIf="!inputSurname.valid && inputSurname.touched">
+                            Imones kodas yra privalomas, turi būti 2-32 simbolių ilgio, galima įvesti tik raides ir tarpą
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label text-end">PVM registracijos kodas:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="position" id="" class="form-control" [class.is-invalid]="!inputPosition.valid && inputPosition.touched" ngModel required #inputPosition="ngModel">
+                        <div class="helper-block " *ngIf="!inputPosition.valid && inputPosition.touched">
+                            PVM kodo laukelis yra privalomas
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label text-end">El. paštas:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="email" id="" class="form-control" [class.is-invalid]="!inputEmail.valid && inputEmail.touched" ngModel required email #inputEmail="ngModel">
+                        <div class="helper-block " *ngIf="!inputEmail.valid && inputEmail.touched">
+                            Elektroninis paštas yra privalomas, turi būti pateiktas validus adresas
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-2 col-form-label text-end">Telefono Nr:</label>
+                    <div class="col-sm-10">
+                        <input type="number" name="birthYear" id="" class="form-control" [class.is-invalid]="!inputBirthYear.valid && inputBirthYear.touched" ngModel required birthYearValidator #inputBirthYear="ngModel">
+                        <div class="helper-block " *ngIf="!inputBirthYear.valid && inputBirthYear.touched">
+                            Telefono nr. yra privalomas laukas
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-sm-2">
+                    <button type="submit" class="btn btn-success">Pridėti naują imone</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
