@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            Pridėti naują imone
+            Pridėti naują darbuotoją
         </div>
         <div class="card-body">
             <form (ngSubmit)="newEmployeeSubmit(f)" #f="ngForm">
@@ -10,7 +10,7 @@
                     <div class="col-sm-10">
                         <input type="text" name="name" id="" class="form-control" [class.is-invalid]="!inputName.valid && inputName.touched" ngModel required minlength="2" maxlength="32" pattern="[a-zA-Z ]*" #inputName="ngModel">
                         <div class="helper-block " *ngIf="!inputName.valid && inputName.touched">
-                            Pavadinimas yra privalomas, turi būti 2-32 simbolių ilgio, galima įvesti tik raides ir tarpą
+                            Imones vardas yra privalomas.
                         </div>
                     </div>
                 </div>
@@ -19,16 +19,16 @@
                     <div class="col-sm-10">
                         <input type="text" name="surname" id="" class="form-control" [class.is-invalid]="!inputSurname.valid && inputSurname.touched" ngModel required minlength="2" maxlength="32" pattern="[a-zA-Z ]*" #inputSurname="ngModel">
                         <div class="helper-block " *ngIf="!inputSurname.valid && inputSurname.touched">
-                            Imones kodas yra privalomas, turi būti 2-32 simbolių ilgio, galima įvesti tik raides ir tarpą
+                            Imones kodas yra privalomas
                         </div>
                     </div>
                 </div>
                 <div class="mb-3 row">
-                    <label for="" class="col-sm-2 col-form-label text-end">PVM registracijos kodas:</label>
+                    <label for="" class="col-sm-2 col-form-label text-end">PVM kodas:</label>
                     <div class="col-sm-10">
                         <input type="text" name="position" id="" class="form-control" [class.is-invalid]="!inputPosition.valid && inputPosition.touched" ngModel required #inputPosition="ngModel">
                         <div class="helper-block " *ngIf="!inputPosition.valid && inputPosition.touched">
-                            PVM kodo laukelis yra privalomas
+                            Pozicijos laukelis yra privalomas
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,8 @@
                     <label for="" class="col-sm-2 col-form-label text-end">Telefono Nr:</label>
                     <div class="col-sm-10">
                         <input type="number" name="birthYear" id="" class="form-control" [class.is-invalid]="!inputBirthYear.valid && inputBirthYear.touched" ngModel required birthYearValidator #inputBirthYear="ngModel">
-                        <div class="helper-block " *ngIf="!inputBirthYear.valid && inputBirthYear.touched">
-                            Telefono nr. yra privalomas laukas
+                        <div class="helper-block " *ngIf=" inputBirthYear.touched">
+                            <P></P>rivalomas laukas.
                         </div>
                     </div>
                 </div>
