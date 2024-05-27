@@ -1,0 +1,16 @@
+1 uzduotis,"SELECT Name, IndepYear FROM world.country WHERE Continent=""Africa"" and IndepYear >=1990",
+,,
+,Eritrea,1993
+,Namibia,1990
+,,
+2 uzduotis,"SELECT Name, SurfaceArea FROM world.country WHERE Continent=""Asia"" ORDER BY SurfaceArea DESC  LIMIT 5",
+,,
+,China,9572900
+,India,3287263
+,Kazakstan,2724900
+,Saudi Arabia,2149690
+,Indonesia,1904569
+,,
+2 uzduotis,"SELECT Name, LifeExpectancy FROM world.country WHERE Continent=""Africa"" AND LifeExpectancy IS NOT NULL ORDER BY LifeExpectancy  ASC LIMIT 1",
+,,
+,Zambia,37.2
