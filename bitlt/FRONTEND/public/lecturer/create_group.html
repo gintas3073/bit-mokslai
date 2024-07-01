@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Group</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Create Group</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="create_course.html">Create Course</a></li>
+            <li><a href="create_lecture.html">Create Lecture</a></li>
+            <li><a href="manage_files.html">Manage Files</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form id="createGroupForm">
+            <label for="groupName">Group Name:</label>
+            <input type="text" id="groupName" name="groupName" required>
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <button type="submit">Create Group</button>
+        </form>
+    </div>
+    <script src="../js/create_group.js"></script>
+</body>
+
+</html>

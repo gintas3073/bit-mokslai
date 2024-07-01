@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Lecture</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Create Lecture</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="create_course.html">Create Course</a></li>
+            <li><a href="create_group.html">Create Group</a></li>
+            <li><a href="manage_files.html">Manage Files</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form id="createLectureForm">
+            <label for="lectureName">Lecture Name:</label>
+            <input type="text" id="lectureName" name="lectureName" required>
+            <label for="group">Group:</label>
+            <select id="group" name="group" required>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <button type="submit">Create Lecture</button>
+        </form>
+    </div>
+    <script src="../js/create_lecture.js"></script>
+</body>
+
+</html>
+frontend/public/lecturer/manage_files.html
